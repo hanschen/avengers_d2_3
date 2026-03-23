@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="190mm"
+   height="140mm"
+   viewBox="0 0 190 140"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="figure1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     showguides="true"
+     inkscape:zoom="1.4958456"
+     inkscape:cx="375.03872"
+     inkscape:cy="278.43784"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid904"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="mm" />
+    <sodipodi:guide
+       position="25,108"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path139994" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path140012" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true"
+       viewBox="0 0 8.886927 5.078244"
+       markerWidth="8.8869267"
+       markerHeight="5.0782437"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path139997" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path139988" />
+    </marker>
+    <symbol
+       id="InputOutput">
+      <title
+         id="title946">Input/Output</title>
+      <desc
+         id="desc948">General input/output functions.</desc>
+      <path
+         d="M 9.2604167,9.2604167 H 35.71875 L 30.427083,30.427083 H 3.96875 Z"
+         style="stroke-width:2"
+         id="path950" />
+    </symbol>
+    <symbol
+       id="Connector">
+      <title
+         id="title1067">Connector</title>
+      <desc
+         id="desc1069">Exit to or entry from another part of chart.</desc>
+      <circle
+         cx="19.84375"
+         cy="19.84375"
+         r="5.2916665"
+         style="stroke-width:2"
+         id="circle1071" />
+    </symbol>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect2752"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 76.729163,17.197915 h 39.687497 l -2.64583,5.291667 H 74.083329 Z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="88.127609"
+       y="20.57411"
+       id="text6280"><tspan
+         sodipodi:role="line"
+         id="tspan6278"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="88.127609"
+         y="20.57411">Prior fluxes</tspan></text>
+    <rect
+       style="fill:#f2bb88;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect82261"
+       width="34.395832"
+       height="5.291667"
+       x="78.052094"
+       y="27.78125" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="88.33226"
+       y="31.420649"
+       id="text82345"><tspan
+         sodipodi:role="line"
+         id="tspan82343"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="88.33226"
+         y="31.420649">Flux model</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 95.250003,33.072917 v 4.497917"
+       id="path93714"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect2764"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 76.729167,38.364583 39.687503,-1e-6 -2.64584,5.291668 -39.687494,-10e-7 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="83.270729"
+       y="42.021206"
+       id="text93800"><tspan
+         sodipodi:role="line"
+         id="tspan93798"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="83.270729"
+         y="42.021206">Ensemble of fluxes</tspan></text>
+    <rect
+       style="fill:#f2bb88;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect96903"
+       width="34.395832"
+       height="5.2916656"
+       x="78.052086"
+       y="48.947918" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="83.273483"
+       y="52.323421"
+       id="text96907"><tspan
+         sodipodi:role="line"
+         id="tspan96905"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="83.273483"
+         y="52.323421">Atmospheric model</tspan></text>
+    <path
+       id="rect2766"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499997"
+       d="m 76.729167,59.53125 39.687513,0 -2.64585,7.9375 -39.687486,0 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="95.240364"
+       y="62.470139"
+       id="text101803"><tspan
+         sodipodi:role="line"
+         id="tspan101801"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="95.240364"
+         y="62.470139">Ensemble of predicted</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="95.240364"
+         y="66.023651"
+         id="tspan133931">atmospheric fields</tspan></text>
+    <rect
+       style="fill:#f2bb88;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect108022"
+       width="34.395832"
+       height="5.2916656"
+       x="78.052086"
+       y="72.760414" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="84.493736"
+       y="76.399811"
+       id="text108026"><tspan
+         sodipodi:role="line"
+         id="tspan108024"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="84.493736"
+         y="76.399811">Data assimilation</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 124.35417,30.427083 -11.1125,0"
+       id="path140433"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 164.04167,30.427083 6.61458,1e-6 V 75.40625 h -57.41459"
+       id="path114253"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 124.35417,47.625 -6.61459,0 -1e-5,7.9375 6.6146,0"
+       id="path149654"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="rect2774"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499999"
+       d="m 125.67708,52.916667 39.68751,1e-6 -2.64584,5.291665 -39.68749,2e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect2772"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499999"
+       d="m 125.67708,44.979167 39.68749,1e-6 -2.64582,5.291665 -39.68751,2e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect2768"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 125.67708,26.458333 39.6875,-1e-6 -2.64583,7.937501 -39.68751,-1e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect2762"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 27.78125,72.73611 39.68749,-3e-6 -2.645823,5.291669 -39.687509,-2e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="127.2887"
+       y="48.338135"
+       id="text120522"><tspan
+         sodipodi:role="line"
+         id="tspan120520"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="127.2887"
+         y="48.338135">Meteorological driving data</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="35.26651"
+       y="76.127724"
+       id="text131379"><tspan
+         sodipodi:role="line"
+         id="tspan131377"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="35.26651"
+         y="76.127724">CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan154811">2</tspan> observations</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="133.10678"
+       y="29.397221"
+       id="text139812"><tspan
+         sodipodi:role="line"
+         id="tspan139810"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="133.10678"
+         y="29.397221">Ensemble of prior</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="133.10678"
+         y="32.950737"
+         id="tspan216478">flux parameters</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 95.250003,43.65625 -1e-6,4.497917"
+       id="path140709"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 95.250003,54.239584 V 58.7375"
+       id="path140915"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 117.73958,51.59375 -4.49791,2e-6"
+       id="path150077"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="128.53285"
+       y="56.293549"
+       id="text167060"><tspan
+         sodipodi:role="line"
+         id="tspan167058"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="128.53285"
+         y="56.293549">CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan177188">2</tspan> boundary conditions</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 66.145833,51.59375 11.1125,0"
+       id="path202944"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect2760"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 27.78125,47.625 39.687502,0 -2.645835,7.9375 -39.687497,0 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="46.305531"
+       y="50.563889"
+       id="text195308"><tspan
+         sodipodi:role="line"
+         id="tspan195304"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="46.305531"
+         y="50.563889">Ensemble of prior</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="46.305531"
+         y="54.117405"
+         id="tspan195306">atmospheric fields</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 138.90625,92.604167 31.75,0 v 44.979163"
+       id="path250293"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="rect3198"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499998"
+       d="m 76.72916,117.7622 39.68753,10e-6 -2.64586,5.29166 H 74.08336 Z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="85.460449"
+       y="121.41878"
+       id="text246746"><tspan
+         sodipodi:role="line"
+         id="tspan246744"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="85.460449"
+         y="121.41878">Posterior fluxes</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 51.59375,92.604167 -31.749997,0 v 44.979173"
+       id="path245694"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 103.1875,78.052083 v 5.291667 h 15.87499 l 1e-5,4.497917"
+       id="path235882"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 87.312503,78.052083 V 83.34375 H 71.437514 l -1.1e-5,4.497917"
+       id="path236255"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:#f2bb88;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect236626"
+       width="34.395832"
+       height="5.291667"
+       x="78.052086"
+       y="107.15625" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="88.332253"
+       y="110.79565"
+       id="text236630"><tspan
+         sodipodi:role="line"
+         id="tspan236628"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         x="88.332253"
+         y="110.79565">Flux model</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 19.843753,2.6458377 V 51.59375 l 5.82083,0"
+       id="path245927"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 95.250002,67.733334 v 4.233333"
+       id="path8921"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect9005"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499997"
+       d="m 52.916667,88.635417 39.687497,-3e-6 -2.645831,7.937503 -39.687501,-3e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="71.306587"
+       y="91.574303"
+       id="text228583"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="71.306587"
+         y="91.574303"
+         id="tspan228579">Ensemble of posterior</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="71.306587"
+         y="95.127815"
+         id="tspan228581">atmospheric fields</tspan></text>
+    <path
+       id="rect9007"
+       style="fill:#a4c0e4;stroke:#000000;stroke-width:0.499997"
+       d="m 100.54167,88.635417 39.6875,-3e-6 -2.64584,7.937503 -39.687494,-3e-6 z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="118.93159"
+       y="91.574303"
+       id="text218459"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="118.93159"
+         y="91.574303"
+         id="tspan218457">Ensemble of posterior</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="118.93159"
+         y="95.127815"
+         id="tspan227625">flux parameters</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 119.0625,96.572917 v 5.291663 H 95.250003 l -3e-6,4.49792"
+       id="path10577"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458299;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:1.05833194,1.05833194;stroke-dashoffset:0"
+       d="M 170.65625,2.6458317 V 14.552083 h -26.45833 l 0,11.1125"
+       id="path15493"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 95.250003,22.489583 V 26.9875"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 95.250002,112.71252 v 4.23334"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 66.145833,75.406253 h 11.1125"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

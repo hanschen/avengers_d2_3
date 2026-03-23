@@ -1,0 +1,201 @@
+\documentclass[a4,12pt]{article}
+
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+
+\title{}
+\author{Hans Chen}
+\date{}
+
+\begin{document}
+
+Here,
+we report on a new ensemble-based dual-state CO2 flux and concentration data assimilation method
+developed within the TRACE Regional Atmosphere--Carbon Ensemble (TRACE) framework.
+One of the goals of this inversion approach is to enable the assimilation of high volumes of dense satellite observations.
+Thus,
+we decided to focus on observations from the CO2M satellite,
+which provides much more data than existing satellites such as OCO-2.
+However,
+as the launch date of the first CO2M satellite was delayed,
+we chose to use synthetic observations instead.
+This allows for more in-depth validation of the experiment results as,
+unlike in the real world,
+the truth is known.
+With that said,
+it is important to emphasize that the results here are idealistic and do not reflect the real world.
+
+
+\section{Method}
+
+The method is based on the ensemble-based simultaneous state and parameter estimation (ESSPE) approach for flux inversion
+introduced in Chen et al. (2023).  % TODO
+Figure~\ref{fig:trace} shows a simplified schematic of approach implement within the TRACE framework.
+TRACE uses different flux models to simulate the fluxes from different sources based on a set of parameters.
+In the current implementation,
+the parameters are simple scaling factors applied to the prior fluxes,
+similar to many other inversion systems such as CarbonTracker (CITATION).
+In the future it would be possible to implement more sophisticated forward models for fluxes similar to CCFFDAS
+(Section X).
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/figure1.png}
+    \caption{Data flow from prior fluxes to posterior fluxes
+        in the TRACE system.
+        Adapted from Chen et al. (2023).  % TODO
+    }
+    \label{fig:trace}
+\end{figure}
+
+Using an ensemble of perturbed flux parameters,
+the system first simulates an ensemble of fluxes.
+These fluxes are used as input for a regional atmospheric transport model,
+which computes the resulting CO2 concentrations based on fluxes,
+initial conditions,
+and lateral boundary conditions.
+The initial and lateral boundary conditions can include different CO2 concentrations but also different meteorological states
+to simulate atmospheric transport errors (Chen et al., 2019).  % TODO
+Unlike many traditional inversion systems such as LUMIA (Section x),
+TRACE uses an online mesoscale weather model to downscale the meteorological conditions from a coarses dataset to higher spatial and temporal resolutions.
+
+The resulting simulated CO2 concentrations from the atmospheric model and prior ensemble of flux parameters
+are then updated based on CO2 concentration observations in the data assimilation component.
+The data assimilation scheme updates both the CO2 concentrations and flux parameters.
+The rationale behind this dual-state approach is that an update of a flux parameter will also result in changes in the simulated CO2 concentrations.
+By updating both simultaneousy based on ensemble correlations,
+there is no need to re-run the atmospheric transport model after updating the parameters.
+
+Here we provide a summary of the data assimilation approach;
+for further details,
+we refer to Chen et al. (2023).  % TODO
+The approach implemented in TRACE is based on the ensemble Kalman Filter (EnKF).
+In the standard Kalman update,
+the background (prior) state vector $\mathbf{x}^b$ is updated based on observations $\mathbf{y}^o$
+to yield the analysis (posterior) state vector $\mathbf{x}^a$:
+\begin{equation}
+    \label{eq:enkf_update}
+    \mathbf{x}^a = \mathbf{x}^b + \mathbf{K}(\mathbf{y}^o - \mathbf{H}(\mathbf{x}^b)),
+\end{equation}
+where $\mathbf{H}$ is the linear observation operator relating model variables to observations,
+and $\mathbf{K}$ is the Kalman gain matrix,
+computed as:
+\begin{equation}
+    \label{eq:kalman_gain}
+    \mathbf{K} = \mathbf{P}^b \mathbf{H}^\top (\mathbf{H}\mathbf{P}^b \mathbf{H}^\top + \mathbf{R})^{-1}.
+\end{equation}
+Here,
+$\mathbf{P}^b$ is the error covariance matrix for the background (prior) and
+$\mathbf{R}$ is the error covariance matrix for the observations.
+
+After assimilating the observations the prior error covariance matrix is updated according to:
+\begin{equation}
+    \label{eq:posterior_cov}
+    \mathbf{P}^a = (\mathbf{I} - \mathbf{K}\mathbf{H})\mathbf{P}^b,
+\end{equation}
+where $\mathbf{P}^a$ is the posterior (analysis) error covariance matrix,
+and $\mathbf{I}$ is the identity matrix.
+
+Unlike traditional atmospheric inversion approaches,
+which include only fluxes or flux parameters in the state vector,
+here $\mathbf{x}$ consists of both gridded two-dimensional flux parameters and three-dimensional CO2 concentrations.
+Propagating the full background error covariance matrix for such high-dimensional systems using the dynamical model is typically not computationally feasible.
+Another computational challenge is to perform the matrix inversion in Equation~\ref{eq:kalman_gain} when the number of assimilated observations is large,
+which is often case for satellite observations.
+To address these challenges,
+the EnKF algorithm approximates the full background error covariance matrix by an ensemble approximation:
+\begin{equation}
+    \label{eq:ensemble}
+    \mathbf{P}^b = \frac{1}{N - 1} \mathbf{X}' \mathbf{X}'^\top,
+\end{equation}
+where $N$ is the number of ensemble members
+and $\mathbf{X}'$ is a matrix whose columns are state vectors of the ensemble perturbations (deviations from the ensemble mean).
+Instead of propagating the full $\mathbf{P}^b$,
+each ensemble member is propagated forward in time using the dynamic model.
+
+Additionally,
+TRACE uses a deterministic square-root formulation of the EnKF,
+in which observations are assimilated serially;
+each time an observation is assimilated,
+the ensemble mean is updated according to Equation~(\ref{eq:enkf_update}).
+At the same time,
+the ensemble perturbations are updated to reflect the reduced uncertainty:
+\begin{equation}
+    \label{eq:mem_update}
+    \mathbf{x}'^a = \mathbf{x}'^b - \widetilde{\mathbf{K}}\mathbf{H}\mathbf{x}'^b,
+\end{equation}
+where $\mathbf{x}'^a$ and $\mathbf{x}'^b$ are the posterior and prior ensemble perturbations,
+respectively,
+and $\widetilde{\mathbf{K}}$ is the reduced Kalman gain:
+\begin{equation}
+    \label{eq:reduced_kalman_gain}
+    \widetilde{\mathbf{K}} = \alpha\mathbf{K}, \quad
+    \alpha = \left(1 + \sqrt{\frac{\mathbf{R}}{\mathbf{H}\mathbf{P}^b\mathbf{H}^\top + \mathbf{R}}} \right)^{-1}.
+\end{equation}
+
+Another advantage of the EnKF implementation is that it allows for the use of the full (potentially nonlinear) observation operator $h$,
+which is applied to each ensemble member to map model states to observations.
+
+EnKF applications typically require techniques to address issues such as rank-deficient and spurious correlations in $\mathbf{P}^b$
+and filter divergence due to underestimated posterior errors.
+Here,
+we applied covariance localization,
+relaxation to prior perturbations,
+and relaxation to initial perturbations for the flux parameters.
+See \citet{chen2023} and \citet{houtekamer2016} for detailed information about these techniques.
+
+
+\section{Setup}
+
+
+\section{Results}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/xco2.png}
+    \caption{Number of synthetic XCO2 observations from a hypothetical CO2M satellite in
+        (a) summer and
+        (b) winter 2021
+        that were available for assimilation.
+        The XCO2 observations were aggregated from their original resolution (about 2 km $\times$ 2 km)
+        to superobs at the atmospheric transport model grid (about 25 km $\times$ 25 km).
+    }
+    \label{fig:xco2}
+\end{figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/rmse.png}
+    \caption{Relative error reduction in posterior net ecosystem exchange fluxes (green)
+        and flux parameters (blue) after assimilating XCO2 observations in
+        (a) summer and
+        (b) winter 2021.
+        The relative error reduction was quantified as one minus the ratio between the root-mean-square errors
+        in posterior and prior values.
+        The gray hatches shading indicates the spinup period before the target month.
+    }
+    \label{fig:rmse}
+\end{figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/map_summer.png}
+    \caption{Spatial distribution of net ecosystem exchange for
+        (a) prior fluxes,
+        (b) truth, and
+        (c) posterior fluxes
+        in July 2021 for the summer experiment.
+        The truth was randomly generated and should not be taken as a reflection of reality.
+    }
+    \label{fig:map_summer}
+\end{figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/map_winter.png}
+    \caption{Same as Figure x but in February 2021 for the winter experiment.}
+    \label{fig:map_winter}
+\end{figure}
+
+\end{document}
