@@ -225,9 +225,69 @@ Only superobservations in grid cells with over 90\% observation coverage were re
 
 \subsection{Atmospheric transport model}
 
+TRACE uses the Weather Research and Forecasting (WRF) model coupled with Chemistry (WRF-Chem)
+to downscale meteorology and simulate the transport of chemical species.
+CO2 was simulated as an inert tracer with no feedback on the meteorological fields.
+Here,
+the simulations were run at a spatial resolution of 25 km,
+60 vertical levels,
+and a one-minute model time step.
+The model domain corresponds to the domain shown in Figure~\ref{fig:xco2}.
+We refer to \citet{chen2023} for further details about the WRF-Chem configuration.
+
+
 \subsection{Data assimilation settings}
 
+The inversions were run with 40 ensemble members with perturbed flux parameters.
+The flux parameters ($\lambda$) were simple scaling factors on prior NEE fluxes from LPJ-GUESS:
+\[
+    NEE_\text{perturbed}(t, x, y) = \lambda(x, y) \cdot NEE _\text{prior}(t, x, y)
+\]
+
+The flux parameters $\lambda$ were assumed to be constant over the summer or winter month.
+Furthermore,
+$\lambda$ was assumed to have a spatial correlation length of 500 km (consistent with LUMIA)
+following a Gaussian decay function.
+The prior flux parameter value set to 1 with an uncertainty (1$\sigma$) of 80\%.
+
+XCO2 observations were assimilated hourly by assigning observations to the closest hour.
+Observation errors were assumed to be uncorrelated with a magnitude of 4 ppm.
+This error is larger than the prescribed random instrument error here (1 ppm)
+to also account for other error sources such as systematic errors,
+representativeness error,
+and atmospheric transport error.
+For real cases,
+one would likely also apply thinning creating superobservations for larger areas to reduce the impact of spatially correlated systematic errors
+\citep[e.g.,][]{chevallierxx}.
+Here we decided to use all available observations to demonstrate that it is computationally feasible to assimilate such dense observations
+using the ESSPE approach in TRACE.
+
+The impact of each XCO2 observation was localized to within 200 km of the observation.
+To avoid filter divergence,
+we applied relaxation to prior perturbations with a relaxation coefficient of 0.2,
+and relaxation to initial perturbations with a relaxation coefficient of 0.1.
+
+
 \subsection{Experiments}
+
+Following the typical OSSE procedure,
+we first ran a ``Truth'' experiment,
+which used a random set of perturbed flux parameters.
+Synthetic XCO2 observations were then sampled from this truth simulations and perturbed with random noise of 1 ppm for each 25 km $\times$ 25 km superobservation.
+These XCO2 observations were then assimilated in the inversion experiments.
+
+We performed two inversion experiments,
+one in July and another January 2021.
+A two-week spin-up period was implemented during which the atmospheric model ran without assimilation,
+allowing the model to establish the relationship between flux parameters and atmospheric CO2 concentrations.
+Because we used an ensemble Kalman filter,
+we optimize only the current parameter values at each assimilation step without retrospectively adjusting past values,
+unlike smoothers that optimize over a temporal window.
+As a result,
+the optimized parameters can appear to exhibit a temporal lag.
+To mitigate this lag effect,
+we included an additional two-week spin-up period with observation assimilation,
+which was excluded from the final analysis.
 
 
 \section{Results}
