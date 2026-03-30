@@ -165,39 +165,36 @@ we do not use an assimilation window in order to isolate and more clearly assess
 
 \section{Setup}
 
-We performed two OSSEs assimilating synthetic XCO2 observations from a hypothetical CO2M satellite:
-one in summer and another in winter,
-constraining fluxes in July and February 2021,
-respectively.
+We conducted two OSSEs assimilating synthetic XCO2 observations from a hypothetical CO2M satellite
+to constrain fluxes in July 2021 (summer) and February 2021 (winter).
 We focused on biospheric fluxes,
-as these tend to produce the largest signals in atmospheric CO2 concentrations at regional scales.
+as they typically generate the strongest regional-scale signals in  atmospheric CO2 concentrations.
 
 
 \subsection{Data}
 
-We used meteorological initial and boundary conditions from the ERA5 reanalysis (CITATION) to drive the regional atmospheric model.
-Hourly ERA5 data were obtained on a 0.25\degree{} resolution grid on 37 pressure levels.
+We used meteorological initial and boundary conditions from the ERA5 reanalysis \citep{hersbach2020} to drive the regional atmospheric model.
+Hourly ERA5 data were obtained at 0.25\degree{} resolution on 37 pressure levels.
 
-For atmospheric initial and lateral boundary conditions in CO2 concentrations,
-we used the CAMS global greenhouse gas inversion constrained by surface observations.
+For CO2 concentration initial and lateral boundary conditions,
+we used the CAMS global inversion-optimized greenhouse gas conditions constrained by surface observations \citep{chevallier2010}.
 The CAMS data were provided on a 1\degree{} grid,
 interpolated from the hexagon grid ($\sim$90 km resolution) of the transport model.
 
 The prior biospheric fluxes were taken from an LPJ-GUESS simulation (0.5\degree{} resolution) downscaled to hourly values,
-see Section X for more details.
+see Section 4.2.1 for more details.
 Fluxes from the ocean,
 fossil fuel emissions, and
 fires
-were assumed to be perfectly known.
-As such,
-they were not included in the experiments,
-as their impacts would be just subtracted out in the data assimilation procedure.
+were assumed to be perfectly known
+and were therefore omitted from the experiments;
+their contributions would simply be subtracted out in the data assimilation step.
 
 
 \subsection{XCO2 observations}
 
-The locations of XCO2 observations were derived from a dataset of synthetic CO2M observations prepared by XX for the CoCO2 project.
-The satellite retrievals were averaged to superobservations at the same resolution as the atmospheric transport model (about 25 km).
+The locations of XCO2 observations were derived from a dataset of simulated CO2M footprints prepared by EUMETSAT for the Copernicus CO2 (CoCO2) project.
+The satellite retrievals were averaged to superobservations (superobs) at the same resolution as the atmospheric transport model (about 25 km).
 Only observations over land (nadir mode) were used.
 Figure~\ref{fig:xco2} shows the observation count for each model grid cell for the two experiments.
 
@@ -209,23 +206,23 @@ Figure~\ref{fig:xco2} shows the observation count for each model grid cell for t
         (b) winter 2021
         that were assimilated in the experiments.
         The XCO2 observations were aggregated from their original resolution (about 2 km)
-        to superobservations at the atmospheric transport model grid (about 25 km resolution).
+        to superobs at the atmospheric transport model grid (about 25 km resolution).
     }
     \label{fig:xco2}
 \end{figure}
 
-The XCO2 observation values were derived from the truth simulation using the mass-weighted vertical integral of CO2 concentrations \citep{FIXME}.
+"The XCO2 observation values were derived from the truth simulation by calculating the mass-weighted column-averaged CO2 dry-air mole fraction.
 Random errors were sampled from a normal distribution with a standard deviation of 1 ppm and were added to all XCO2 observations.
 Here we did not include systematic errors;
 this aspect will be further explored in WP5.
 
-For each XCO2 superobservation,
+For each XCO2 superob,
 we calculated the fraction of grid cell covered by observations,
 taking also into account cloud cover.
 The cloud cover was taken from the truth simulation.
 To convert vertically resolved cloud cover from the atmospheric model to total cloud cover in each grid cell,
 we assumed exponential--random overlap \citep{FIXME} with a vertical decorrelation length scale of 2 km.
-Only superobservations in grid cells with over 90\% observation coverage were retained for assimilation.
+Only superobs in grid cells with over 90\% observation coverage were retained for assimilation.
 
 
 \subsection{Atmospheric transport model}
@@ -262,7 +259,7 @@ to also account for other error sources such as systematic errors,
 representativeness error,
 and atmospheric transport error.
 For real cases,
-one would likely also apply thinning creating superobservations for larger areas to reduce the impact of spatially correlated systematic errors
+one would likely also apply thinning creating superobs for larger areas to reduce the impact of spatially correlated systematic errors
 \citep[e.g.][]{chevallier2007}.
 Here we decided to use all available observations to demonstrate that it is computationally feasible to assimilate such dense observations
 using the ESSPE approach in TRACE.
@@ -278,7 +275,7 @@ and relaxation to initial perturbations with a relaxation coefficient of 0.1.
 Following the typical OSSE procedure,
 we first ran a ``Truth'' experiment,
 which used a random set of perturbed flux parameters.
-Synthetic XCO2 observations were then sampled from this truth simulations and perturbed with random noise of 1 ppm for each 25 km $\times$ 25 km superobservation.
+Synthetic XCO2 observations were then sampled from this truth simulations and perturbed with random noise of 1 ppm for each 25 km $\times$ 25 km superobs.
 These XCO2 observations were then assimilated in the inversion experiments.
 
 We performed two inversion experiments,
