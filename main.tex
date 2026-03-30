@@ -290,14 +290,11 @@ which was excluded when evaluating the monthly fluxes.
 \section{Results}
 
 Figure~\ref{fig:rmse} shows the relative error reductions (RERs) in NEE and flux parameters for the summer and winter inversions.
-The relative error reduction is defined as one minus the fraction between the posterior RMSE and prior RMSE.
-We note we used the RMSE to the truth,
-which is a more realistic metric than the posterior and prior uncertainty---%
-methods such as EnKF tend to underestimate the posterior uncertainty because it does not account for factors such as systematic errors,
-nonlinearity,
-non-Gaussian statistics,
-etc.
-We present RERs for daily-averaged fluxes/flux parameters because flux errors contain a substantial diurnal component.
+We define RER as one minus the ratio of posterior to prior RMSE.
+We used RMSE relative to the truth,
+which provides a more realistic metric than posterior uncertainty estimates,
+as methods like EnKF tend to underestimate posterior uncertainty.
+We present RERs for daily-averaged fluxes and flux parameters to exclude diurnal variations.
 
 \begin{figure}[tb]
     \centering
@@ -306,28 +303,30 @@ We present RERs for daily-averaged fluxes/flux parameters because flux errors co
         and flux parameters (blue) after assimilating XCO2 observations in
         (a) summer and
         (b) winter 2021.
-        The relative error reduction was quantified as one minus the ratio between the root-mean-square errors
-        in posterior and prior values.
-        The gray hatches shading indicates the spinup period before the target month.
+        The relative error reduction was quantified as one minus the ratio of posterior to prior root-mean-square errors.
+        The gray hatched shading indicates the spinup period before the target month.
     }
     \label{fig:rmse}
 \end{figure}
 
-Generally,
-TRACE is able to substantially reduce the errors in NEE (flux parameter values) in July 2021,
-with a mean RER of 67.3\% (61.5\%).
-The reason the RERs different between fluxes and parameters is that the flux parameters may not be optimized in some regions where the fluxes are weak.
-Figure~\ref{fig:rmse}a furthermore shows that RER increases quickly within the first week and then shows a more gradual increase,
+By assimilating XCO2 observations,
+TRACE is able to substantially reduce the errors in NEE and flux parameters in July 2021,
+with a monthly mean RER of 67.3\% and 61.5\%,
+respectively.
+The RERs differ between fluxes and parameters because in regions with weak fluxes,
+the parameter values have little impact on the overall flux and thus remain poorly constrained.
+Figure~\ref{fig:rmse}a furthermore shows that the RER increases quickly within the first week and then exhibits a more gradual increase,
 suggesting that most of the optimization occurs during the first week of assimilation.
+
 In comparison,
 the RERs in February 2021 show slower increases,
 reaching relatively lower values of 29.4\% for fluxes and 23.3\% for flux parameters.
-This result reflects the effect reduced satellite coverage in winter (Figure~\ref{fig:xco2}b)
+This result reflects the effect of reduced satellite coverage in winter (Figure~\ref{fig:xco2}b)
 due to large solar zenith angles and increased cloudiness,
 combined with weaker biospheric flux signals,
 which reduces the covariance between flux parameters and atmospheric CO2 concentrations.
-The RERs in Figure~\ref{fig:rmse}b do not appear to have reach the same ``saturation'' as in Figure~\ref{fig:rmse}a,
-suggesting that increased observational coverage would be beneficial especially in the winter case.
+The RERs in Figure~\ref{fig:rmse}b plateau less than in Figure~\ref{fig:rmse}a,
+indicating that increased observational coverage would be particularly beneficial in the winter case.
 
 \begin{figure}[tb]
     \centering
@@ -343,16 +342,16 @@ suggesting that increased observational coverage would be beneficial especially 
 \end{figure}
 
 Figure~\ref{fig:map_summer} presents the monthly NEE in the summer experiment for the prior, true, and posterior biospheric fluxes.
-We note again that the ``true'' fluxes here are an assumed truth and does not necessarily reflect reality.
-The inversion is able to make the posterior fluxes more similar to the truth in several regions,
-in particular in northern Africa at the southern edge of the domain,
+We reiterate that the ``true'' fluxes are constructed for this OSSE and do not represent real-world conditions.
+The inversion is able to bring the posterior fluxes closer to the truth in several regions---%
+particularly in northern Africa,
 southern Spain,
-and parts of Central Europe,
-increasing the correlation with true fluxes from 0.11 for the prior to 0.87.
-The error in regional total NEE is reduced from 36.6 TgC month$^{-1}$ (prior) to 3.2 TgC month$^{-1}$ (posterior),
+and parts of Central Europe---%
+increasing the spatial correlation with the true fluxes from 0.11 (prior) to 0.87 (posterior).
+The error in regional total NEE was reduced from 36.6 TgC month$^{-1}$ in the prior to 3.2 TgC month$^{-1}$ in the posterior,
 representing a 91.4\% relative error reduction.
-In terms of RMSE in monthly gridcell-level NEE,
-the corresponding relative error reduction is 70.6\%.
+In terms of the RMSE in monthly gridcell-level NEE,
+the corresponding relative error reduction was 70.6\%.
 
 \begin{figure}[tb]
     \centering
@@ -364,24 +363,21 @@ the corresponding relative error reduction is 70.6\%.
 \end{figure}
 
 In the winter experiment,
-the adjustment in posterior fluxes are not as apparent as the summer case (Figure~\ref{fig:map_winter}).
-The most noticeable difference from the prior fluxes are reduced NEE over parts of Western Europe,
+the adjustments in posterior fluxes are not as pronounced as the summer case (Figure~\ref{fig:map_winter}).
+The most noticeable difference from the prior are reduced NEE over parts of Western Europe
 and increased NEE over Hungary and the Balkans,
-although not as large as in the truth.
-In this case,
-the error in regional total NEE is reduced from 7.2 TgC month$^{-1}$ to 4.6 TgC month$^{-1}$ (35.8\% relative error reduction).
-The corresponding relative error reduction in monthly gridcell-level NEE is 30.6\%.
+though the latter remains weaker than in the truth.
+Spatial correlation increased from 0.57 (prior) to 0.80 (posterior).
+The error in regional total NEE was reduced from 7.2 TgC month$^{-1}$ in the prior to 4.6 TgC month$^{-1}$ in the posterior,
+a 35.8\% relative error reduction.
+The corresponding relative error reduction in monthly gridcell-level NEE was 30.6\%.
 
 To summarize,
-the results here show that the ESSPE approach implemented in TRACE is a promising method for assimilating dense satellite observations.
-The inversion results should be interpreted with caution;
-we do not expect such high error reductions in the real case,
-as there are additional error sources that are not included here,
-including systematic observation errors,
-atmospheric transport errors,
-flux parameter errors that do not fit our assumed statistical model,
-etc.
-The methods introduced here allow for further constraint on CO2 fluxes using more information from current and future satellite observations.
+these results demonstrate that TRACE's ESSPE approach is promising for assimilating dense satellite observations.
+The inversion performance shown here should be interpreted with caution:
+error reductions in real applications are likely to be smaller due to additional error sources not represented here.
+Nevertheless,
+the methods presented provide a pathway to further constrain CO2 fluxes by leveraging increased information from current and future satellite missions.
 
 \bibliography{references}
 
